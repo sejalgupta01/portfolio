@@ -11380,16 +11380,30 @@ dialog a:hover {
   right: 0;
   background-color: var(--primary);
   border-radius: 0 4px 0 10px;
-  pointer-events: auto;
 }
 
 .go-arrow {
   /* margin-top: -4px; */
   /* margin-right: -4px; */
-  padding: 2px 6px 2px 10px;
+  padding: 2px 6px 0px 10px;
+  margin-bottom: -3px;
   color: white;
   font-size: large;
   /* font-family: courier, sans; */
+}
+
+.card-back .go-arrow {
+  /* margin-top: -4px; */
+  /* margin-right: -4px; */
+  padding: 2px 6px 0px 10px;
+  margin-bottom: -3px;
+  color: white;
+  font-size: large;
+  /* font-family: courier, sans; */
+}
+
+label {
+  cursor: pointer;
 }
 
 .testmonial-card {
@@ -11403,7 +11417,6 @@ dialog a:hover {
   /* text-decoration: none; */
   z-index: 0;
   overflow: hidden;
-  pointer-events: none;
 }
 
 .testmonial-card:before {
@@ -11421,23 +11434,19 @@ dialog a:hover {
   transition: transform 0.4s ease-out;
 }
 
-.testmonial-card:hover:before {
+/* .testmonial-card:hover:before {
   transform: scale(50);
-}
+} */
 
-/* .testmonial-card:hover .card-front { */
-  /* transition: all 0.3s ease-out; */
-  /* display: none; */
-/* } */
-
-.testmonial-card:hover .card-front { 
+/* .testmonial-card:hover .card-front { 
   opacity: 0;
-}
+} */
 
 .testmonial-card .card-back {
   display: none;
   color: white;
   margin-top: -80px;
+  /* margin-left: -75%; */
   padding-left: 5px;
   padding-right: 5px;
   /* z-index: 100; */
@@ -11453,10 +11462,52 @@ dialog a:hover {
   margin-bottom: 15px;
 }
 
-.testmonial-card:hover .card-back {
+/* .testmonial-card:hover .card-back {
   display: block;
-  /* color: white; */
-  /* z-index: 100; */
+} */
+
+input[type=checkbox] {display: none;}
+
+#courses-uni:checked + .testmonial-card .card-front {
+  opacity: 0
+}
+
+#courses-uni:checked + .testmonial-card .card-back {
+  display: block;
+}
+
+#courses-uni:checked + .testmonial-card:before {
+  transform: scale(50);
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-out;
+}
+
+#courses-xii:checked + .testmonial-card .card-front {
+  opacity: 0
+}
+
+#courses-xii:checked + .testmonial-card .card-back {
+  display: block;
+}
+
+#courses-xii:checked + .testmonial-card:before {
+  transform: scale(50);
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-out;
+}
+
+#courses-x:checked + .testmonial-card .card-front {
+  opacity: 0
+}
+
+#courses-x:checked + .testmonial-card .card-back {
+  display: block;
+}
+
+#courses-x:checked + .testmonial-card:before {
+  transform: scale(50);
+  transform-origin: 50% 50%;
+  transition: transform 0.4s ease-out;
 }
 
 .contact {
@@ -11473,6 +11524,7 @@ dialog a:hover {
   margin: 0 auto 150px;
   z-index: 99;
   background: #fff;
+  width: 75%;
 }
 
 .contact .form {
@@ -11480,8 +11532,8 @@ dialog a:hover {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  border-right: 1px solid #dee2e6;
-  padding: 35px 30px 35px 0;
+  /* border-right: 1px solid #dee2e6; */
+  padding: 25px 0 25px 0;
 }
 
 .contact .form form {

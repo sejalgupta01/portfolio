@@ -6,11 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Steller landing page.">
     <meta name="author" content="Devcrud">
-    <title>Steller Landing page | Free Bootstrap 4.1 landing page</title>
+    <title>Sejal Gupta</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
     <link rel="stylesheet" href="assets/css/steller.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const btn = document.getElementById('btn');
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        btn.textContent = 'Message Sent!';
+                        btn.disabled = true;
+                    }, function(error) {
+                        btn.textContent = 'An Error Occured, Try Again';
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -130,8 +152,8 @@
     <!-- Experience section -->
     <section id="experience" class="section mt-3">
         <div class="container text-center mt-5">
-            <h6 class="subtitle">My Credibility</h6>
-            <h6 class="section-title mb-4">Experience</h6>
+            <!-- <h6 class="subtitle">My Credibility</h6> -->
+            <h6 class="section-title mb-4 mt-4">Experience</h6>
             <p class="mb-5 pb-4">The works and opportunities that have impacted my career as well as<br>my personal
                 growth are presented below.</p>
 
@@ -278,8 +300,8 @@
     <!-- Education Section -->
     <section id="education" class="section mt-3 pb-5">
         <div class="container text-center mt-5">
-            <h6 class="subtitle">My Academic History</h6>
-            <h6 class="section-title mb-4">Education</h6>
+            <!-- <h6 class="subtitle">My Academic History</h6> -->
+            <h6 class="section-title mb-4 mt-4">Education</h6>
             <p class="mb-4 pb-4">My qualifications, universities, schools and the respective grades<br> with which I
                 graduated are mentioned below.</p>
 
@@ -310,6 +332,7 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
+                        <input type="checkbox" id="courses-uni" />
                         <div class="card testmonial-card border">
                             <div class="card-inner">
                                 <div class="card-front">
@@ -322,9 +345,9 @@
                                         <h5>Indian Institute of Technology (IIT) Goa</h5>
                                         <h5>2019 - 2023</h5>
                                         <h5>CGPA: 9.22/10</h5>
-                                        <div class="go-corner" href="#">
+                                        <div class="go-corner">
                                             <div class="go-arrow">
-                                                Courses
+                                                <label for="courses-uni">Courses</label>
                                             </div>
                                         </div>
                                     </div>
@@ -354,12 +377,18 @@
                                                 CS513: Introduction to Information Security<br>
                                             </div>
                                         </div>
+                                        <div class="go-corner">
+                                            <div class="go-arrow">
+                                                <label for="courses-uni">Go Back</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
+                        <input type="checkbox" id="courses-xii" />
                         <div class="card testmonial-card border">
                             <div class="card-inner">
                                 <div class="card-front">
@@ -372,9 +401,9 @@
                                         <h5>N. K. Bagrodia Public School</h5>
                                         <h5>2017 - 2019</h5>
                                         <h5>Percentage: 96</h5>
-                                        <div class="go-corner" href="#">
+                                        <div class="go-corner">
                                             <div class="go-arrow">
-                                                Courses
+                                                <label for="courses-xii">Courses</label>
                                             </div>
                                         </div>
                                     </div>
@@ -391,12 +420,18 @@
                                                 English<br>
                                             </div>
                                         </div>
+                                        <div class="go-corner">
+                                            <div class="go-arrow">
+                                                <label for="courses-xii">Go Back</label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
+                        <input type="checkbox" id="courses-x" />
                         <div class="card testmonial-card border">
                             <div class="card-inner">
                                 <div class="card-front">
@@ -409,9 +444,9 @@
                                         <h5>N. K. Bagrodia Public School</h5>
                                         <h6>2015 - 2017</h6>
                                         <h6>CGPA: 10/10</h6>
-                                        <div class="go-corner" href="#" onclick="window.secondary.show();">
+                                        <div class="go-corner">
                                             <div class="go-arrow">
-                                                Courses
+                                                <label for="courses-x">Courses</label>
                                             </div>
                                         </div>
                                     </div>
@@ -426,6 +461,11 @@
                                                 Social Science (History, Civics, Geography, Economics)<br>
                                                 English<br>
                                                 French<br>
+                                            </div>
+                                        </div>
+                                        <div class="go-corner">
+                                            <div class="go-arrow">
+                                                <label for="courses-x">Go Back</label>
                                             </div>
                                         </div>
                                     </div>
@@ -450,7 +490,7 @@
     <!-- Portfolio section -->
     <section id="projects" class="section mt-3">
         <div class="container text-center mt-5">
-            <h6 class="subtitle">My Works</h6>
+            <!-- <h6 class="subtitle">My Works</h6> -->
             <h6 class="section-title mb-4">Projects</h6>
             <p class="mb-4 pb-4">Learn more about my projects in different domains like<br>data analysis, deep learning,
                 development and programming, below.</p>
@@ -576,8 +616,34 @@
                         <div class="overlay">
                             <div class="overlay-infos">
                                 <h5>Conway's<br>Game Of Life</h5>
-                                <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
-                                <a href="javascript:void(0)"><i class="ti-link"></i></a>
+                                <!-- <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a> -->
+                                <!-- <a href="javascript:void(0)"><i class="ti-link"></i></a> -->
+                                <a href="javascript:void(0)" onclick="window.dialog4.showModal();"><i
+                                    class="ti-zoom-in"></i></a>
+                                <dialog id="dialog4">
+                                    <h3>Conway's Game Of Life</h3>
+                                    <hr style="border-top: 1px solid white; width: 100%;">
+                                    <p>The Game of Life is a <b>cellular automaton</b> devised by <b>John Horton Conway</b>. It is a 
+                                        zero-player game, that is, its evolution is determined by its initial state only. This project  
+                                        includes <b>programming, testing and simulating</b> the game.<br><br>
+                                        The <b>Python</b> code <b>mimics the rules and working</b> of the game, given an initial 
+                                        state and the number of evolutions by the user. The Python code is <b>tested</b> using the 
+                                        <b>unittest</b> library in Python. The game is then <b>simulated</b> with UI using the <b>Pygame</b> 
+                                        library in Python. It contains functionality to <b>choose an initial state</b>, which includes 
+                                        the composition of the population and the size of the world, <b>evolve to the next generation</b>
+                                        and <b>evolve continuously until stopped</b>.<br><br>
+                                        The motivation for this project was to expore the interesting cellular automaton and the patterns 
+                                        it is able to produce. The game of life became an area of interest also because it was raised in 
+                                        a few courses from the college curriculum, such as <b>Theory of Computation</b> and 
+                                        <b>Complex Social and Economic Sytems</b>. 
+                                    </p>
+                                    <button onclick="window.dialog4.close();" aria-label="close" class="x"><i
+                                            class="ti-close"></i></button>
+                                    <a href="https://github.com/sejalgupta01/game-of-life" target="_blank">View
+                                        Github Repo</a>
+                                </dialog>
+                                <a href="https://github.com/sejalgupta01/game-of-life" target="_blank"><i
+                                        class="ti-link"></i></a>
                             </div>
                         </div>
                     </div>
@@ -677,8 +743,8 @@
     <!-- Skills section -->
     <section id="skills" class="section mt-3">
         <div class="container text-center mt-5">
-            <h6 class="subtitle">My Competence</h6>
-            <h6 class="section-title mb-4">Skills</h6>
+            <!-- <h6 class="subtitle">My Competence</h6> -->
+            <h6 class="section-title mb-4 mt-3">Skills</h6>
             <p class="mb-5 pb-4">The technical domains that I have experience working with and the tech stacks <br> that
                 I am proficient/familiar with are mentioned below.</p>
 
@@ -854,32 +920,31 @@
     <!-- Contact Section -->
     <section id="contact" class="position-relative section">
         <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br>
-                rerum commodi corrupti, temporibus non quam.</p>
+            <!-- <h6 class="subtitle">Contact</h6> -->
+            <h6 class="section-title mb-4 mt-4">Contact Me</h6>
+            <p class="mb-3 pb-4">Feel free to get in touch with me for hiring opportunities,<br>seeking mentorship or just to have a chat.</p>
 
             <div class="contact text-left">
                 <div class="form">
                     <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
+                    <h6 class="section-title">Connect With Me</h6>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="exampleInputName1"
+                                placeholder="Name" name="user_name" required>
+                        </div>
                         <div class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email" required>
+                                aria-describedby="emailHelp" placeholder="Email" name="user_email" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                placeholder="Password" required>
+                            <textarea name="message" id="" cols="30" rows="3" class="form-control"
+                                placeholder="Message" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-block rounded w-lg" id="btn">Send Message</button>
                     </form>
                 </div>
-                <div class="contact-infos">
+                <!-- <div class="contact-infos">
                     <div class="item">
                         <i class="ti-location-pin"></i>
                         <div class="">
@@ -901,17 +966,17 @@
                             <p>info@website.com</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div id="map">
+        <!-- <div id="map">
             <iframe src="https://snazzymaps.com/embed/61257"></iframe>
-        </div>
+        </div> -->
     </section>
     <!-- End of Contact Section -->
 
     <!-- Page Footer -->
-    <footer class="page-footer">
+    <!-- <footer class="page-footer">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-sm-6">
@@ -930,7 +995,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- End of page footer -->
 
     <!-- core  -->
