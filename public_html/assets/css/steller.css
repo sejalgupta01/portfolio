@@ -11255,6 +11255,19 @@ dialog ::-webkit-scrollbar-thumb {
   border-right: 4px rgb(255 255 255 / 70%) solid;
   background-clip: padding-box;
 }
+
+@media (max-width: 767.98px) {
+  dialog {
+    width: 80%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  dialog {
+    width: 70%;
+  }
+}
+
 /* 
 ::-webkit-scrollbar {
   width: 30px;
@@ -11301,6 +11314,22 @@ dialog ::-webkit-scrollbar-thumb {
 
 .card .post-details a i {
   padding-right: 5px;
+}
+
+@media (max-width: 767.98px) {
+  #about {
+    height: 95vh;
+  }
+
+  .img-thumbnail {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  #about {
+    height: 85vh;
+  }
 }
 
 .custom-card {
@@ -11400,16 +11429,6 @@ dialog ::-webkit-scrollbar-thumb {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-@media (max-width: 991.98px) {
-  .testmonial-card {
-    max-width: 600px;
-  }
-
-  .carousel-control-next {
-    margin-left: 200px;
-  }
 }
 
 .testmonial-card img {
@@ -11610,6 +11629,39 @@ input[type=checkbox] {display: none;}
 
   .card-back .col-md-4 {
     font-size: small;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .testmonial-card {
+    max-width: 450px;
+  }
+
+  .carousel-control-next {
+    margin-left: 200px;
+  }
+
+  .testmonial-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .testmonial-card h5 {
+    font-size: 1rem;
+  }
+
+  .go-arrow {
+    font-size: medium;
+  }
+
+  .card-back .go-arrow {
+    font-size: medium;
+  }
+
+  .card-back .col-sm-4 {
+    font-size: 0.7rem;
+    padding-bottom: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
