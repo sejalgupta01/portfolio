@@ -4665,6 +4665,7 @@ input[type="button"].btn-block {
 
 .navbar-toggler:hover, .navbar-toggler:focus {
   text-decoration: none;
+  outline: none;
 }
 
 .navbar-toggler-icon {
@@ -11076,10 +11077,32 @@ pre {
   display: block;
 }
 
+@media (max-width: 767.98px) {
+  .img-wrapper {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 160px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-wrapper {
+    height: 160px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .img-wrapper {
+    height: 180px;
+  }
+}
+
 .img-wrapper img {
   position: relative;
   width: 100%;
   z-index: 8;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-wrapper .overlay {
@@ -11143,6 +11166,10 @@ pre {
 
 dialog {
   width: 55%;
+  visibility: hidden;
+  display: flex;
+  max-height: 90%;
+  flex-direction: column;
   /* height: 75%; */
 	padding: 1rem 3rem;
 	background: rgba(255, 122, 87, 0.8);
@@ -11175,7 +11202,9 @@ dialog p {
   text-align: justify;
   font-size: 1.1rem;
   line-height: 1.3rem;
-  padding: 1rem 0;
+  padding: 1rem 0; 
+  flex: 1;
+  overflow: auto; 
 }
 
 dialog .x {
@@ -11192,15 +11221,15 @@ dialog .x {
 }
 
 dialog a {
+  padding: 8px;
   text-decoration: none;
   width: 100%;
-  height: 50px;
   border: 2px solid white;
   border-radius: 10px;
   background-color: transparent;
   color: white;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   transition: ease-in 0.2s;
   color: white;
   font-size: 1.2rem;
@@ -11216,6 +11245,27 @@ dialog a:hover {
   transition: ease-in 0.2s;
   color: var(--primary);
 }
+
+dialog ::-webkit-scrollbar {
+  width: 30px;
+}
+
+dialog ::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-right: 4px rgb(255 255 255 / 70%) solid;
+  background-clip: padding-box;
+}
+/* 
+::-webkit-scrollbar {
+  width: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 12px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: rgb(255 255 255 / 80%);
+} */
 
 @keyframes fadeIn {
 	from {
@@ -11293,10 +11343,6 @@ dialog a:hover {
   transform: rotateX(180deg);
 }
 
-/* .custom-card .card-body {
-  padding: 55px 0;
-} */
-
 .custom-card .card-body i {
   display: block;
   font-size: 40px;
@@ -11307,11 +11353,39 @@ dialog a:hover {
 .custom-card:hover, .custom-card:active {
   background: #ff7a57;
   color: #fff;
-  height: 350px;
+  height: 320px;
 }
 
 .custom-card:hover i, .custom-card:active i {
   color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .flip-card-back {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .col-md-6 {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .flip-card-back {
+    padding: 10px;
+  }
+
+  .custom-card:hover, .custom-card:active {
+    height: 250px;
+  }
 }
 
 .testmonial-card {
@@ -11326,6 +11400,16 @@ dialog a:hover {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+  .testmonial-card {
+    max-width: 600px;
+  }
+
+  .carousel-control-next {
+    margin-left: 200px;
+  }
 }
 
 .testmonial-card img {
@@ -11510,6 +11594,25 @@ input[type=checkbox] {display: none;}
   transition: transform 0.4s ease-out;
 }
 
+
+@media (max-width: 991.98px) {
+  .testmonial-card {
+    max-width: 600px;
+  }
+
+  .carousel-control-next {
+    right: -30px;
+  }
+
+  .carousel-control-prev {
+    left: -30px;
+  }
+
+  .card-back .col-md-4 {
+    font-size: small;
+  }
+}
+
 .contact {
   position: relative;
   border-radius: 0.3rem;
@@ -11646,11 +11749,18 @@ input[type=checkbox] {display: none;}
 }
 
 .navbar .navbar-nav .nav-link {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   margin: 0 10px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav .nav-link {
+    font-size: 18px;
+    margin: 5px 0;
+  }
 }
 
 .navbar .navbar-nav .nav-link.active {
@@ -11708,6 +11818,7 @@ input[type=checkbox] {display: none;}
 
 .page-footer {
   background: #fcfdff;
+  box-shadow: inset -1px -1px 7px rgba(173, 181, 189, 0.5);
 }
 
 .page-footer .row {
