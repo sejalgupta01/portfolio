@@ -1,16 +1,3 @@
-/*!
-=========================================================
-* Steller Landing page
-=========================================================
-
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 :root {
   --blue: #79A9F5;
   --indigo: #C45F90;
@@ -68,6 +55,7 @@ body {
   color: #495057;
   text-align: left;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus {
@@ -10980,6 +10968,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .title {
   font-size: calc(18px + (25 - 18) * ((100vw - 320px) / (1200 - 320)));
+  margin-bottom: 10px;
 }
 
 @media (min-width: 992px) {
@@ -11256,15 +11245,47 @@ dialog ::-webkit-scrollbar-thumb {
   background-clip: padding-box;
 }
 
+@media (max-width: 991.98px) {
+  dialog {
+    width: 70%;
+  }
+}
+
 @media (max-width: 767.98px) {
   dialog {
     width: 80%;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 575.98px) {
   dialog {
-    width: 70%;
+    width: 100%;
+  }
+
+  dialog p {
+    font-size: smaller;
+  }
+
+  dialog h3 {
+    font-size: 1.6rem;
+    padding-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 300px) {
+  dialog {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  dialog p {
+    font-size: small;
+  }
+
+  dialog h3 {
+    font-size: 1.3rem;
+    padding-bottom: 0.6rem;
+    margin-top: 1rem;
   }
 }
 
@@ -11318,10 +11339,11 @@ dialog ::-webkit-scrollbar-thumb {
 
 @media (max-width: 767.98px) {
   #about {
-    height: 95vh;
+    height: 100vh;
   }
 
   .img-thumbnail {
+    margin-top: -40px;
     width: 50%;
   }
 }
@@ -11665,6 +11687,168 @@ input[type=checkbox] {display: none;}
   }
 }
 
+@media (max-width: 575.98px) {
+  .testmonial-card {
+    max-width: 420px;
+  }
+
+  .carousel-control-next {
+    margin-right: 20px;
+  }
+
+  .carousel-control-prev {
+    margin-left: 20px;
+  }
+
+  .card-back .col-sm-4 {
+    font-size: 0.7rem;
+    width: 33%;
+    padding-bottom: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (max-width: 535px) {
+  .testmonial-card {
+    max-width: 350px;
+    height: 180px;
+  }
+
+  .carousel-control-next {
+    margin-right: 20px;
+  }
+
+  .carousel-control-prev {
+    margin-left: 20px;
+  }
+
+  .testmonial-card h4 {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+  .testmonial-card h5 {
+    font-size: 0.8rem;
+  }
+
+  .go-arrow {
+    font-size: smaller;
+  }
+
+  .card-back .go-arrow {
+    font-size: smaller;
+  }
+
+  .card-back .col-sm-4 {
+    font-size: 0.6rem;
+    width: 33%;
+    padding-bottom: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .card-back .col-md-12 {
+    font-size: 0.6rem;
+    margin-bottom: -10px;
+  }
+}
+
+@media (max-width: 444px) {
+  .testmonial-card {
+    max-width: 280px;
+    height: 150px;
+  }
+
+  .carousel-control-next {
+    margin-right: 20px;
+  }
+
+  .carousel-control-prev {
+    margin-left: 20px;
+  }
+
+  .testmonial-card h4 {
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+
+  .testmonial-card h5 {
+    font-size: 0.65rem;
+  }
+
+  .go-arrow {
+    font-size: smaller;
+  }
+
+  .card-back .go-arrow {
+    font-size: smaller;
+  }
+
+  .testmonial-card .card-back h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-back .col-sm-4 {
+    font-size: 0.5rem;
+    width: 33%;
+    padding-bottom: 45px;
+    padding-left: 2px;
+    padding-right: 8px;
+  }
+
+  .card-back .col-md-12 {
+    font-size: 0.6rem;
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  .testmonial-card {
+    max-width: 280px;
+    height: 150px;
+  }
+
+  .carousel-control-next {
+    margin-right: 10px;
+  }
+
+  .carousel-control-prev {
+    margin-left: 10px;
+  }
+
+  .testmonial-card .card-back h5 {
+    margin-top: -80px;
+  }
+
+  .go-arrow {
+    font-size: small;
+  }
+
+  .card-back .go-arrow {
+    font-size: small;
+  }
+
+  .card-back .col-sm-4 {
+    font-size: 0.42rem;
+    width: 33%;
+    padding-bottom: 45px;
+    padding-left: 2px;
+    padding-right: 8px;
+  }
+
+  .card-back .col-md-12 {
+    font-size: 0.5rem;
+    margin-bottom: -20px;
+  }
+}
+
 .contact {
   position: relative;
   border-radius: 0.3rem;
@@ -11931,7 +12115,7 @@ input[type=checkbox] {display: none;}
 }
 
 .header .container .infos .title {
-  margin-bottom: 0px;
+  /* margin-bottom: 0px; */
   font-size: 74px;
   font-weight: bold;
 }
@@ -11983,7 +12167,7 @@ input[type=checkbox] {display: none;}
             justify-content: center;
   }
   .header .container .infos {
-    margin-top: 0;
+    margin-top: 100px;
   }
   .header .container .img-holder {
     display: none;
@@ -12114,5 +12298,29 @@ input[type=checkbox] {display: none;}
   .subtitle-desc {
     width: 100%;
     margin-left: 0%;
+  }
+}
+
+@media (max-width: 444px) {
+  .flip-card-back {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 308px) {
+  .flip-card-back {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .img-wrapper {
+    height: 130px;
+  }
+}
+
+@media (max-width: 315px) {
+  .img-wrapper {
+    height: 100px;
   }
 }
