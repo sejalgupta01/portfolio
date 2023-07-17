@@ -11008,6 +11008,48 @@ pre {
 }
 
 @media (-moz-touch-enabled: 0), (pointer: fine) {
+  .img-wrapper {
+    overflow: hidden;
+  }
+
+  .img-wrapper .project-heading {
+    display: none;
+  }
+
+  .img-wrapper .more-info-base {
+    display: none;
+  }
+
+  .more-info {
+    display: none;
+  }
+
+  .back {
+    display: none;
+  }
+
+  .custom-card:hover, .custom-card:active {
+    background: #ff7a57;
+    color: #fff;
+    height: 320px;
+  }
+
+  .custom-card:hover i, .custom-card:active i {
+    color: #fff;
+  }
+
+  .custom-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+    /* height: fit-content; */
+  }
+
+  .custom-card:hover .flip-card-back {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-top: -10px;
+  }
+
   .socials .social-item:hover {
     background: #ff7a57;
     color: #fff;
@@ -11045,6 +11087,29 @@ pre {
     background-color: rgba(255, 255, 255, 0.8);
     transition: ease-in 0.2s;
     color: var(--primary);
+  }
+}
+
+.project-heading {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.more-info-base {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 300px) {
+  .project-heading {
+    font-size: smaller;
+    padding-top: 2px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .custom-card:hover, .custom-card:active {
+    height: 250px;
   }
 }
 
@@ -11092,7 +11157,7 @@ pre {
 .img-wrapper {
   position: relative;
   border-radius: 0.25rem;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-bottom: 30px;
   display: block;
   display: block;
@@ -11384,13 +11449,6 @@ dialog ::-webkit-scrollbar-thumb {
   transform-style: preserve-3d;
 }
 
-@media (min-width: 992px) {
-  .custom-card:hover .flip-card-inner {
-    transform: rotateX(180deg);
-    /* height: fit-content; */
-  }
-}
-
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -11414,18 +11472,6 @@ dialog ::-webkit-scrollbar-thumb {
   color: #ff7a57;
 }
 
-@media (min-width: 992px) {
-  .custom-card:hover, .custom-card:active {
-    background: #ff7a57;
-    color: #fff;
-    height: 320px;
-  }
-
-  .custom-card:hover i, .custom-card:active i {
-    color: #fff;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .flip-card-back {
     padding: 10px;
@@ -11447,10 +11493,6 @@ dialog ::-webkit-scrollbar-thumb {
 @media screen and (max-width: 991.98px) {
   .flip-card-back {
     padding: 10px;
-  }
-
-  .custom-card:hover, .custom-card:active {
-    height: 250px;
   }
 }
 
@@ -12410,4 +12452,3 @@ input[type=checkbox] {display: none;}
     font-size: 0.9rem;
   }
 }
-
