@@ -11007,6 +11007,10 @@ pre {
   text-decoration: none;
 }
 
+.flip-card-back .text-left {
+  margin-top: -20px;
+}
+
 @media (-moz-touch-enabled: 0), (pointer: fine) {
   .img-wrapper {
     overflow: hidden;
@@ -11039,7 +11043,7 @@ pre {
   }
 
   .custom-card:hover .flip-card-inner {
-    transform: rotateX(180deg);
+    transform: rotateY(180deg);
     /* height: fit-content; */
   }
 
@@ -11087,6 +11091,10 @@ pre {
     background-color: rgba(255, 255, 255, 0.8);
     transition: ease-in 0.2s;
     color: var(--primary);
+  }
+
+  .flip-card-back .text-left {
+    margin-top: 20px;
   }
 }
 
@@ -11452,7 +11460,7 @@ dialog ::-webkit-scrollbar-thumb {
 }
 
 .flip-card-back {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 }
 
 @media screen and (min-width: 1200px) {
@@ -11604,7 +11612,7 @@ label {
 input[type=checkbox] {display: none;}
 
 #iudx:checked + .custom-card .flip-card-inner {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 }
 
 #iudx:checked + .custom-card {
@@ -11619,7 +11627,7 @@ input[type=checkbox] {display: none;}
 }
 
 #goog-swe:checked + .custom-card .flip-card-inner {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
   /* height: fit-content; */
 }
 
@@ -11635,7 +11643,7 @@ input[type=checkbox] {display: none;}
 }
 
 #goog-step:checked + .custom-card .flip-card-inner {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
   /* height: fit-content; */
 }
 
@@ -11651,7 +11659,7 @@ input[type=checkbox] {display: none;}
 }
 
 #wtef:checked + .custom-card .flip-card-inner {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
   /* height: fit-content; */
 }
 
