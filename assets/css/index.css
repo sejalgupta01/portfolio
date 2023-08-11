@@ -11265,6 +11265,7 @@ dialog {
 		background: rgb(255 255 255 / 40%);
 		z-index: 2;
 		backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 	}
 }
 
@@ -11275,6 +11276,7 @@ dialog.close {
 dialog h3 {
   font-weight: 600;
   padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
 }
 
 dialog p {
@@ -11292,7 +11294,7 @@ dialog .x {
   background: none;
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 20px;
   transition: ease transform 0.3s;
   cursor: pointer;
   transform-origin: center;
@@ -11343,15 +11345,18 @@ dialog ::-webkit-scrollbar-thumb {
 @media (max-width: 575.98px) {
   dialog {
     width: 100%;
-  }
-
-  dialog p {
-    font-size: smaller;
+    height: 90%;
   }
 
   dialog h3 {
     font-size: 1.6rem;
     padding-bottom: 0.6rem;
+  }
+}
+
+@media (max-width: 429.98px) {
+  dialog p {
+    font-size: smaller;
   }
 }
 
